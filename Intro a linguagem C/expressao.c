@@ -1,4 +1,16 @@
-#include <stdio.h> 
+/*
+
+Programa que lê uma expressão simples do tipo:
+1+2*3=
+300-20*10=
+3*3+2+3*9+7=
+
+Após a leitura, o programa calcula o resultado da expressão
+
+*/
+
+
+#include <stdio.h>
 
 int main(){
     int num_1 = 0, num_2 = 0, num_3 = 0;
@@ -29,11 +41,11 @@ int main(){
                         if (operacao == '=') {
                             break;
                         }
-                    }   
+                    }
                 }
-                num_1 = num_1 + num_2; 
+                num_1 = num_1 + num_2;
             }
-            
+
         }
         if (operacao == '-') {
             scanf("%d", &num_2);

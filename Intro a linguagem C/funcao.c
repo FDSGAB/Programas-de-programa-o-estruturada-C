@@ -1,3 +1,10 @@
+/*
+
+Programa que calcula o valor de uma expressão com somatórios:
+somatório (de 1 a n) *(m + 5*somatorio (de 1 a m) (k + 1)^2)
+
+*/
+
 #include <stdio.h> 
 
 int main(){

@@ -1,4 +1,12 @@
-#include <stdio.h> 
+/*
+
+Verifica se uma sequência de números inputados pelo usuário está em ordem
+crescente, decrescente ou desordenada.
+Condição de parada: colocar um número negativo
+
+*/
+
+#include <stdio.h>
 
 int main(){
     int num_lido = 0, crescente = 0, decrescente = 0, total = 0, antigo = 0;

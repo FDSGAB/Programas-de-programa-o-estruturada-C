@@ -1,5 +1,13 @@
-#include <stdio.h> 
-#include <stdlib.h>
+/*
+
+Lê uma sequência de números inteiros e verifica quantos deles são
+ptencias de dois
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h> //Não é utilizado nesse programa
 
 int main(){
     int qtde_entradas = 0;

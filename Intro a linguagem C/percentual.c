@@ -1,4 +1,11 @@
-#include <stdio.h> 
+/*
+
+Programa que lê uma sequência de números e devolve a porcentagem de quantos
+são múltiplod de 10. Caso de parada: colocar um número negativo
+
+*/
+
+#include <stdio.h>
 
 int main(){
     int num_lido = 0, total = 0, mult_dez = 0;

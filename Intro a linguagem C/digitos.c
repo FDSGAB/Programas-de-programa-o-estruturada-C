@@ -1,4 +1,10 @@
-#include <stdio.h> 
+/*
+
+Programa que lê um número inteiro e conta quantos algarismos ímpares há nele
+
+*/
+
+#include <stdio.h>
 
 int main(){
     int num_lido = 0, impares = 0;
