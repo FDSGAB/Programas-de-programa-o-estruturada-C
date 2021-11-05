@@ -1,3 +1,12 @@
+/*
+
+O programa lê duas matrizes e em seguida veridica quantas vezes a matriz2
+ocorre na matriz1.
+
+*/
+
+
+
 #include <stdio.h>
 
 
@@ -29,10 +38,10 @@ int main () {
 
 
     //Verificar quantas vezes a matriz 2 ocorre na matriz 1
-    int ocorrencias = 0, conta_ocorrencia = 0; 
+    int ocorrencias = 0, conta_ocorrencia = 0;
     for (percorre_linha1 = 0; percorre_linha1 < linhas1; percorre_linha1++) {
         for (percorre_coluna1 = 0; percorre_coluna1 < colunas1; percorre_coluna1++){
-            
+
 
             //Percorrer os elementos em volta do elemento analisado e verificar se existe igualdade
             for (percorre_linha2 = 0; percorre_linha2 < linhas2; percorre_linha2++ ) {
@@ -54,7 +63,7 @@ int main () {
             //Verifica se a matriz 2 esta inserida (talvez essa linha seja redundante)
             if (conta_ocorrencia == colunas2*linhas2) {
             ocorrencias++;
-            
+
             }
             conta_ocorrencia = 0;
 

@@ -1,3 +1,9 @@
+/*
+
+Programa que lê uma frase e verifica quantas palavras há nela
+
+*/
+
 #include <stdio.h>
 
 int main () {

@@ -1,4 +1,12 @@
-#include "ordenacao_tamanho.h"
+/*
+
+Função que verifica se o tamanho das palavras de uma string recebida estão em
+ordem crescente (1) decrescente (2) ou sem ordem (3)
+
+*/
+
+
+#include "ordenacao_tamanho.h"//Utilizado para a avaliação do prog
 
 int verificar_ordenacao_tamanho(char texto[]) {
    int percorre_texto = 0, tamanho_texto = 0, conta_palavra = 1, tamanho_antigo_palavra = 0, tamanho_atual_palavra = 0, conta_tamanho_palavra = 0, crescente = -1, decrescente = 0, igual = 0;

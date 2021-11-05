@@ -1,4 +1,16 @@
-#include "diagonal_dominante.h"
+/*
+
+Recebe uma matriz quadrada (n x n) e verifica se a matriz é
+estritamente diagonal dominante por linhas.
+
+Uma matriz é estritamente diagonal dominante por linhas se, em todas as
+linhas da matriz, o módulo do valor na diagonal principal é maior que a
+soma dos módulos dos demais valores da linha
+
+*/
+
+
+#include "diagonal_dominante.h"//Utilizado para avaliação do prog
 
 int diagonal_dominante(int n, int m[][n]) {
     int contador_linha = 0, contador_coluna =0, soma = 0, diagonal = 0;

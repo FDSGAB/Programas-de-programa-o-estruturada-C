@@ -1,4 +1,13 @@
-#include "remover_palavra.h"
+/*
+
+Função que recebe uma string e um índice i e remove a palavra no índice i da
+string
+
+*/
+
+
+
+#include "remover_palavra.h"//Utilizado para a avaliação do prog
 
 void remover_palavra(int i, char frase[]) {
     int contador_frase = 0, contador_palavra = 1, contador_vetor = 0, tamanho = 0, vetor_espacos[101], contador_auxiliar = 0;
