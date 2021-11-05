@@ -1,4 +1,12 @@
-#include "dec2bin.h"
+/*
+
+Função recursiva que converte um número natural decimal para base binária
+
+*/
+
+
+
+#include "dec2bin.h"//Utilizado para avaliação do prog
 
 int dec2bin(int n_decimal) {
     if (n_decimal==0) {

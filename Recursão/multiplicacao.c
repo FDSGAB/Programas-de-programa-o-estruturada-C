@@ -1,4 +1,12 @@
-#include "multiplicacao.h"
+/*
+
+Função que calcula a multiplica entre dois numeros (a*b) pelo método da
+multiplicação russa (ou etíope)
+
+*/
+
+
+#include "multiplicacao.h"//Utilizado para avaliação do prog
 
 int multiplicacao_russa(int a, int b) {
     if (a == 1) {

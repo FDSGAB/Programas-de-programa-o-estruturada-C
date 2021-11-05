@@ -1,8 +1,18 @@
-#include "determinante.h"
+/*
+
+Programa que calcula o determinante de uma matriz n x n com uma função recursiva
+pelo teorema de laplace
+
+*/
+
+
+
+
+#include "determinante.h"//Utilizado para avaliação do prog
 #include <stdio.h>
 
 void remove_primeira_linha_e_coluna_c(int n, float m_entrada[n][n], float m_saida[n-1][n-1], int c) {
-    
+
 
     //Passa os valores da m_entrada pra m_saida excluindo a primeira linha e a coluna c que no caso da matriz é c
     int linhas = 0, colunas = 0, colunas_msaida_aux = 0;
@@ -12,7 +22,7 @@ void remove_primeira_linha_e_coluna_c(int n, float m_entrada[n][n], float m_said
                 m_saida[linhas-1][colunas_msaida_aux] = m_entrada[linhas][colunas];
                 colunas_msaida_aux++;
             }
-        } 
+        }
         colunas_msaida_aux = 0;
     }
 
@@ -20,9 +30,9 @@ void remove_primeira_linha_e_coluna_c(int n, float m_entrada[n][n], float m_said
 }
 
 float calcula_determinante(int n, float m_entrada[n][n]) {
-    
+
     float m_saida[n-1][n-1];
-    
+
     //Devolve o caso trivial
     if (n-1 == 0) {
         return m_entrada[n-1][n-1];
@@ -49,7 +59,7 @@ int main() {
     scanf("%d", &n);
 
     //Le e armazena os elementos inputados na matriz nxn
-    float matriz[n][n]; 
+    float matriz[n][n];
     int conta_linha = 0, conta_coluna = 0;
     for (conta_linha = 0; conta_linha < n; conta_linha++) {
         for (conta_coluna = 0; conta_coluna < n; conta_coluna++) {
@@ -65,7 +75,7 @@ int main() {
     //Calcula o determinante
     printf("%.2f\n", calcula_determinante(n,matriz));
 
-    
-    
+
+
     return 0;
 }
