@@ -1,4 +1,17 @@
-#include "compactar.h"
+/*
+
+Função que recebe um vetor v de n inteiros e compacta-o de maneira similar
+à compressão de Runlength.
+
+O vetor comprimido contém um valor e o número seguitne representa quantas
+vezes seguidas ele aparece. Por, fim os espaços não preenchidos são preeenchidos
+com -1.
+
+*/
+
+
+
+#include "compactar.h" //include utilizado pelo professor
 
 void compactar_vetor(int v[], int n) {
     int vetor_aux[n], contador1 = 0, contador2 = 0, ocorrencias = 0, numero = 0, num_antigo = 0;
@@ -12,7 +25,7 @@ void compactar_vetor(int v[], int n) {
             num_antigo = v[contador1];
         }
         numero = v[contador1];
-        
+
 
         if  (numero == num_antigo && contador1<=(n-2)) {
             ocorrencias++;
@@ -35,5 +48,5 @@ void compactar_vetor(int v[], int n) {
     contador1 = 0;
     for (contador1 = 0 ; contador1 < n ; contador1++) {
         v[contador1] = vetor_aux[contador1];
-    } 
+    }
 }

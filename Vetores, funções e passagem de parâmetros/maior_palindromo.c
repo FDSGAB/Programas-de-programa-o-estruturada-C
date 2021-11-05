@@ -1,4 +1,29 @@
-#include "maior_palindromo.h"
+/*
+
+Programa que contem tres funções:
+
+1 - converte_numero_para_vetor_de_digitos:
+converte um número inteiro para um vetor
+contendo, em cada item, os dígitos deste número do mais significativo para o
+menos significativo.Após o último dígito o valor -1 é incluido para marcar
+o fim da sequencia.
+Exemplo: para  n = 246, o vetor será : [2, 4, 6, -1].
+
+2 - eh_palindromo:
+verifica se o vetor recebido é um palindromo
+
+3 - maior_palindromo:
+procura o maior inteiro palindromo P resultado do produto
+P = A x B com, A <= m e B <= m (m é um parâmetro da função). Por exemplo, 
+para m=25, o maior palíndromo é 575, sendo A=25 e B=23. Nesse caso, o retorno da
+função será 575 e os elementos no parâmetro fatores são preenchidos da
+seguinte forma: fatores[0]=25 e fatores[1]=23. Assume-se que o vetor passado [
+para a função possui duas posições (índices 0 e 1).
+
+*/
+
+
+#include "maior_palindromo.h"//utilizado pelo professor para avaliação
 
 void converte_numero_para_vetor_de_digitos(int n, int v[]) {
     int contador1 = 0, numero = 0, tamanho = 0, contador2 = 0;
@@ -17,7 +42,7 @@ void converte_numero_para_vetor_de_digitos(int n, int v[]) {
             n = n/10;
         }
     }
-    //adiciona o -1 necessario a o final do vetor
+    //adiciona o -1 necessario ao final do vetor
     tamanho++;
     v[tamanho-1] = -1;
 }

@@ -1,4 +1,16 @@
+/*
+
+Insere números em um vetor, colocando-os em ordem crescente e limite de
+100 números.
+Condição de parada: digitar -1
+
+*/
+
+
+
 #include <stdio.h>
+
+
 int main() {
 int lista[100];
 int i = 0, numero = 0;
@@ -13,7 +25,7 @@ while (numero != -1){
         for (k=0; k<=i; ++k) {
             if (i>=1){
                 int z = 0;
-                for (z=0; z<=102; z++) {
+                for (z=0; z<=102; z++) {  //Bubble_sort não-otimizado
                     int j = 0, trocador = 0;
                     for (j = 0; j<i; j++){
                         if (lista[j]>lista[j+1]){
@@ -28,7 +40,7 @@ while (numero != -1){
             printf("%d ", lista[k]);
         }
     printf("\n");
-    }   
+    }
     if (numero == -1) {
             break;
         }
