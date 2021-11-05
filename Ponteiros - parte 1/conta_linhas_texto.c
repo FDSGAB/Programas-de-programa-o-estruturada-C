@@ -1,11 +1,20 @@
-#include "conta_linhas_texto.h"
+/*
+
+Função que recebe um texto e uma largura de linha e, em seguida, calcula a
+quantidade de linhas necessárias para imprimir o texto passado para a função.
+O retorno da quantidade de linhas é por referência, no parâmetro qtd_linhas.
+
+*/
+
+
+#include "conta_linhas_texto.h"//Utilizado para avaliação do prog
 
 void conta_linhas(char texto[], int largura_linha, int *qtd_linhas) {
-    
-    
+
+
     int percorre_texto = 0, tamanho_palavra_atual = 0, conta_palavras = 1;
-    int vetor_tamanho_palavras[1000000], contador_vetor = 0; 
-    
+    int vetor_tamanho_palavras[1000000], contador_vetor = 0;
+
     //faz um vetor com os tamanhos das palavras, pontuações e espaços
     for (percorre_texto = 0; 1; percorre_texto++) {
         if (texto[percorre_texto] == '\0') {
@@ -31,8 +40,8 @@ void conta_linhas(char texto[], int largura_linha, int *qtd_linhas) {
             tamanho_palavra_atual++;
         }
     }
-    
-    
+
+
     //calcula quantas linhas precisa para separar o texto
     int i = 0, contador_linhas = 1, soma = 0;
     while (i < contador_vetor) {

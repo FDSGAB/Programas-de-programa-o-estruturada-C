@@ -1,4 +1,20 @@
-#include "frase.h"
+/*
+
+Função que recebe uma frase e retorna o valor de algumas estatísticas sobre os
+comprimentos das palavras na frase. O retorno é realizado por parâmetros
+passados por referência. As frases podem conter pontuação.
+
+Estatísticas:
+min: comprimento da menor palavra
+max: comprimento da maior palavra
+soma: soma dos comprimentos de todas as palavras
+media: média dos comprimentos das palavras
+desvio: desvio padrão (std) dos comprimentos das palavras
+
+*/
+
+
+#include "frase.h"//Utilizado para a avaliação do prog
 #include "math.h"
 
 void estatisticas_frase(char frase[], int *min, int *max, int *soma, double *media, double *desvio) {
@@ -6,12 +22,12 @@ void estatisticas_frase(char frase[], int *min, int *max, int *soma, double *med
 
     int percorre_frase = 0, tamanho_palavra_atual = 0, conta_palavras = 1;
 
-    int vetor_tamanho_palavras[100], contador_vetor = 0; 
+    int vetor_tamanho_palavras[100], contador_vetor = 0;
 
     *soma = 0;
     *max = 0;
     *min = 1000;
-    
+
 
     for (percorre_frase = 0; 1; percorre_frase++) {
         if (frase[percorre_frase] == '\0') {
@@ -29,7 +45,7 @@ void estatisticas_frase(char frase[], int *min, int *max, int *soma, double *med
         }
 
 
-        // Espaço , . ; : ! ? 
+        // Espaço , . ; : ! ?
         if (frase[percorre_frase] == ' '|| frase[percorre_frase] == '.' || frase[percorre_frase] == ',' || frase[percorre_frase] == ':' || frase[percorre_frase] == ';' || frase[percorre_frase] == '!' || frase[percorre_frase] == '?') {
             if (frase[percorre_frase] == ' ') {
                 conta_palavras++;
@@ -60,11 +76,11 @@ void estatisticas_frase(char frase[], int *min, int *max, int *soma, double *med
 
     *media = *soma / ((double) conta_palavras);
 
-    double soma_desvio = 0; 
+    double soma_desvio = 0;
     int contador_desvio = 0;
     for (contador_desvio = 0; contador_desvio < contador_vetor ; contador_desvio++) {
         soma_desvio += (vetor_tamanho_palavras[contador_desvio] - *media) * (vetor_tamanho_palavras[contador_desvio] - *media);
-    } 
+    }
     soma_desvio = soma_desvio / conta_palavras;
 
     *desvio = sqrt(soma_desvio);

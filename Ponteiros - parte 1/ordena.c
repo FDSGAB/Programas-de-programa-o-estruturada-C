@@ -1,3 +1,11 @@
+/*
+
+Função que ordena os 3 valores passados por referência em ordem crescente
+
+*/
+
+
+
 void ordena(int *a, int *b, int *c) {
     int vetor_abc[3] = {*a, *b, *c};
     int percorre_vetor = 1, max = *a, min = *a;
@@ -9,7 +17,7 @@ void ordena(int *a, int *b, int *c) {
         if (min > vetor_abc[percorre_vetor]) {
             min = vetor_abc[percorre_vetor];
         }
-    } 
+    }
     percorre_vetor = 0;
     for (percorre_vetor = 0; percorre_vetor <=2; percorre_vetor++) {
         if (vetor_abc[percorre_vetor] != max && vetor_abc[percorre_vetor] != min) {
